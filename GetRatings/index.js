@@ -5,20 +5,20 @@ module.exports = async function (context, req) {
         if(context.bindings.ratingRecord.length)
         {
             context.res = {
-                status: 404,
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: 'No ratings found with the specified parameters.'
+                body: JSON.stringify(context.bindings.ratingRecord)
             };
         }
         else
         {
             context.res = {
+                status: 404,
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(context.bindings.ratingRecord)
+                body: 'No ratings found with the specified parameters.'
             };
         }
     }
