@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "ratingRecord",
+      "type": "cosmosDB",
+      "databaseName": "challenge02",
+      "collectionName": "ratings",
+      "createIfNotExists": true,
+      "connectionStringSetting": "MyAccount_CosmosDB",     
+      "direction": "out"
+  }
+  ]
+}

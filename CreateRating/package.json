@@ -1,0 +1,15 @@
+{
+  "name": "createrating",
+  "version": "1.0.0",
+  "description": "This creates a rating for our OpenHack competition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team 6",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "request-promise-native": "^1.0.5",
+    "uuid": "^3.3.2"
+  }
+}
