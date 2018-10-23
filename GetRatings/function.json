@@ -16,7 +16,7 @@
       "type": "cosmosDB",
       "databaseName": "challenge02",
       "collectionName": "ratings",
-      "sqlQuery": "select * from c where c.userId = {userId}",
+      "sqlQuery": "select c.id,c.userId,c.productId,c.timestamp,c.locationName,c.rating,c.userNotes from c where c.userId = {userId}",
       "connectionStringSetting": "MyAccount_CosmosDB",     
       "direction": "in"
     },
