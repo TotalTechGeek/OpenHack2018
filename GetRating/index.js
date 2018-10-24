@@ -1,5 +1,6 @@
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
+    // Ozi's name is being used here as a test. :)
 
     if (req.query.id || (req.body && req.body.id)) {
         if(context.bindings.ratingRecord.length)
@@ -13,6 +14,7 @@ module.exports = async function (context, req) {
         }
         else
         {
+
             context.res = {
                 status: 404,
                 headers: {
