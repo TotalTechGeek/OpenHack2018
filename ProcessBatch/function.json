@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "batchRecord",
+      "type": "cosmosDB",
+      "databaseName": "challenge02",
+      "collectionName": "orders",
+      "createIfNotExists": true,
+      "connectionStringSetting": "MyAccount_CosmosDB",     
+      "direction": "out"
+  }
+  ]
+}
